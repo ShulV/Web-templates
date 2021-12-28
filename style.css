@@ -1,0 +1,4 @@
+.content__subblock {
+    display: flex;
+    flex-direction: column;
+}
