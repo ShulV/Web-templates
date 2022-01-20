@@ -1,0 +1,385 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: #e5e5e5;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding: 70px 92px;
+
+    border: 1px solid #424242;
+    background-color: #424242;
+}
+
+/* Блок чекбоксов */
+
+.checkboxes
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 176px;
+    height: 309px;
+    margin-right: 92px;
+    padding: 20px 25px 30px 30px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.checkboxes__header
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 25px;
+
+    color: #333;
+}
+
+.checkboxes__checkbox
+{
+    display: none;
+
+    opacity: 0;
+}
+
+.checkboxes__label
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 19px;
+
+    position: relative;
+
+    margin-top: 20px;
+    padding-left: 24px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+.checkboxes__checkbox + span
+{
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid #ccb26e;
+    border-radius: 3px;
+}
+
+.checkboxes__checkbox + span::before
+{
+    font-size: 15px;
+    line-height: 15px;
+
+    position: absolute;
+
+    box-sizing: border-box;
+    width: 6.33px;
+    height: 3px;
+    margin-top: 4px;
+    margin-left: 4px;
+
+    content: '';
+    transform: rotate(-45deg);
+    text-align: center;
+
+    opacity: 0;
+    border-bottom: 1px solid #ccb26e;
+    border-left: 1px solid #ccb26e;
+}
+
+.checkboxes__checkbox:checked + span::before
+{
+    opacity: 1;
+}
+
+/* Блок селектов */
+
+.selects
+{
+    height: 309px;
+    margin-right: 92px;
+
+    border-radius: 10px;
+}
+
+.selects .is-open
+{
+    background-color: #fff;
+}
+
+.choices
+{
+    width: 176px;
+
+    border: 0;
+    border-radius: 10px;
+}
+
+.choices[data-type*='select-one'].is-open
+{
+    border: 0;
+    border-radius: 10px;
+}
+
+.choices[data-type*='select-one'].is-focused
+{
+    border: 0;
+    border-radius: 10px;
+}
+
+.is-open .choices__inner
+{
+    box-sizing: border-box;
+
+    border-color: #ccb26e;
+    border-radius: 10px;
+}
+
+.choices__inner
+{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.choices[data-type*='select-one']:after
+{
+    width: 8px;
+    height: 8px;
+    margin-top: -6px;
+
+    transform: rotate(135deg);
+
+    border-width: 0;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+}
+
+.choices[data-type*='select-one'].is-open:after
+{
+    margin-top: -2px;
+
+    border-width: 0;
+    border-bottom: 1px solid #ccb26e;
+    border-left: 1px solid #ccb26e;
+}
+
+.choices[data-type*='select-one'].is-open
+{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.choices-item:after
+{
+    content: '';
+}
+
+.choices__list--dropdown .choices__item--selectable
+{
+    padding-right: 0;
+}
+
+.choices__list--dropdown
+{
+    margin-top: 0;
+
+    border-width: 0;
+}
+
+/* Карта */
+
+.map1
+{
+    width: 460px !important;
+    height: 460px !important;
+    margin-top: 70px;
+}
+
+[class*='ground-pane']
+{
+    filter: grayscale(1);
+}
+
+/* scroll */
+
+.scroll-block-1
+{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 170%;
+
+    width: 400px;
+    height: 310px;
+    margin-top: 70px;
+    padding: 20px 30px;
+
+    color: #333;
+    background: #fff;
+}
+
+.simplebar-scrollbar:before
+{
+    opacity: 1;
+    background: #ccb26e;
+}
+
+/* Форма */
+
+.form-1
+{
+    font-family: 'Roboto';
+
+    box-sizing: border-box;
+    width: 440px;
+    min-height: 410px;
+    margin-top: 70px;
+    margin-right: 200px; /* перенос след. блока */
+    padding: 15px 30px;
+
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.form-1__label
+{
+    font-size: 12px;
+    line-height: 12px;
+
+    margin-left: 20px;
+
+    color: #ff5c00;
+}
+
+.form-1__text-field
+{
+    box-sizing: border-box;
+    width: 380px;
+    height: 60px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding: 24px 20px;
+
+    border: 1px solid #ff5c00;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.form-1__text-field::placeholder
+{
+    color: #999;
+}
+
+.form-1__btn
+{
+    font-size: 20px;
+    line-height: 23px;
+
+    margin-top: 20px;
+    margin-left: 7px;
+    padding: 18.5px 53px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #fff;
+    border-radius: 10px;
+    background: #ff5c00;
+}
+
+/* tooltip */
+
+.tooltip-block
+{
+    width: 375px;
+    margin-top: 70px;
+    padding: 20px 30px;
+
+    background-color: #fff;
+}
+
+.tooltip-block__text
+{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 170%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 270px;
+    margin: 0;
+
+    color: #333;
+}
+
+.tooltip-block__tooltip
+{
+    font-size: 12px;
+    line-height: 12px;
+
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border-radius: 50%;
+    background-color: #bcbcbc;
+}
+
+.tooltip-block__tooltip:hover
+{
+    background-color: #ccb26e;
+}
+
+.tippy-box[data-theme~='custom-tooltip-theme']
+{
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+
+    color: #fff;
+    background-color: #666;
+
+}
+
+.tippy-box[data-theme~='custom-tooltip-theme'][data-placement^='top'] > .tippy-arrow::before
+{
+  top: 70%;
+  border-top: 10px solid #666;
+}

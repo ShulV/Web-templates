@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16</title>
+  <!--  -->
+  <!-- CSS -->
+  <!--  -->
+  <!-- сброс стилей -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- кастомный скролл -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <!-- кастомные селекты -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  <!-- шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- общие стили -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--  -->
+  <!-- JS -->
+  <!--  -->
+  <!-- кастомные селекты -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <!-- кастомный скролл -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <!-- яндекс карта -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <!-- маска для формы -->
+  <script src="./js/inputmask.min.js"></script>
+  <!-- валидация формы -->
+  <script src="./js/just-validate.min.js"></script>
+  <!-- тултипы -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+</head>
+
+<body>
+  <div class="main">
+    <!-- ЧЕКБОКС -->
+    <div class="checkboxes">
+      <h2 class="checkboxes__header">Категории:</h2>
+      <label for="checkbox1" class="checkboxes__label">
+        <input type="checkbox" id="checkbox1" class="checkboxes__checkbox">Динозавры<span></span></label>
+      <label for="checkbox2" class="checkboxes__label">
+        <input type="checkbox" id="checkbox2" class="checkboxes__checkbox"><span></span>Медведи</label>
+      <label for="checkbox3" class="checkboxes__label">
+        <input type="checkbox" id="checkbox3" class="checkboxes__checkbox"><span></span>Косули</label>
+      <label for="checkbox4" class="checkboxes__label">
+        <input type="checkbox" id="checkbox4" class="checkboxes__checkbox"><span></span>Лисы</label>
+      <label for="checkbox5" class="checkboxes__label">
+        <input type="checkbox" id="checkbox5" class="checkboxes__checkbox"><span></span>Волки</label>
+      <label for="checkbox6" class="checkboxes__label">
+        <input type="checkbox" id="checkbox6" class="checkboxes__checkbox"><span></span>Олени и лоси</label>
+    </div>
+    <!-- СЕЛЕКТЫ -->
+    <div class="selects">
+      <select>
+        лол
+        <option>Древесина</option>
+        <option>Металл</option>
+        <option>Камень</option>
+        <option>Пластик</option>
+        <option>Композитный</option>
+        <option>Гипс</option>
+      </select>
+    </div>
+    <!-- Яндекс карта -->
+    <div id="map1" class="map1" style="width: 600px; height: 400px">
+    </div>
+    <!-- SCROLL-BAR -->
+    <div class="scroll-block-1" data-simplebar>
+      Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно
+      развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены
+      отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+      эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее:
+      непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом,
+      однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+      социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты
+      для первоочередных требований.
+    </div>
+    <!-- Форма -->
+    <form action="#" class="form-1">
+      <label class="form-1__label" for="form-1__name">Как вас зовут?</label>
+      <input class="form-1__text-field" type="text" name="form-1__name" id="form-1__name" placeholder="Имя*"
+        data-validate-field="name">
+      <label class="form-1__label" for="form-1__phone">Укажите ваш телефон</label>
+      <input class="form-1__text-field" type="tel" name="form-1__phone" id="form-1__phone" placeholder="Телефон*"
+        data-validate-field="tel">
+      <label class="form-1__label" for="form-1__email">Укажите ваш e-mail</label>
+      <input class="form-1__text-field" type="email" name="form-1__email" id="form-1__email" placeholder="E-mail*"
+        data-validate-field="email">
+      <input class="form-1__btn" type="submit" value="Заказать">
+    </form>
+    <!-- tooltip -->
+    <div class="tooltip-block">
+      <p class="tooltip-block__text">Следует отметить, что социально-экономическое развитие способствует повышению
+        качества переосмысления внешнеэкономических политик.<span class="tooltip-block__tooltip"><span>i</span></span>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- инициализаторы элементов -->
+  <script src="./js/select_init.js"></script>
+  <script src="./js/map_init.js"></script>
+  <script src="./js/validate_init.js"></script>
+  <script src="./js/inputmask_init.js"></script>
+  <script src="./js/tooltip_init.js"></script>
+</body>
+
+</html>
