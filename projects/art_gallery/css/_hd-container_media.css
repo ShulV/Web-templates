@@ -1,0 +1,11 @@
+@media (max-width: 1600px) {
+    .header-down {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 400px) {}

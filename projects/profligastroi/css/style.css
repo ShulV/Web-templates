@@ -1,0 +1,25 @@
+:root {
+  --orange: #e88d21;
+  --white: white;
+  --dark-gray: #212121;
+  --dark-gray-38: #383838;
+  --black: black;
+  --tab-slider-animation-time: 0.5s;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white);
+}
+
+/* YANDEX MAP */
+
+.ymaps-2-1-79-map {
+  width: 100% !important;
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+/*  */

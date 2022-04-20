@@ -1,0 +1,61 @@
+:root {
+    --dark-purple: #7943A4;
+    --medium-purple: #9D5CD0;
+    --light-purple: #C283F3;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.default-padding {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.default-padding-top {
+    padding-top: 80px;
+}
+
+.heading-1 {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    color: #333333;
+    margin-top: 8px;
+    margin-bottom: 23px;
+}
+
+.white {
+    color: #fff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.no-scroll-y {
+    overflow-y: hidden;
+}
+
+picture {
+    line-height: 0;
+}

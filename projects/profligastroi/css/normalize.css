@@ -1,0 +1,34 @@
+
+a {
+  background-color: transparent;
+}
+
+img {
+  border-style: none;
+}
+
+h1, h2, h2, h3, h4, h6, p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+textarea,
+textarea:focus,
+input,
+input:focus {
+  box-sizing: border-box;
+  border-width: 0;
+  outline-width: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

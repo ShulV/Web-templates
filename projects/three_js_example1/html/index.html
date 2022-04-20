@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 3</title>
+</head>
+
+<body>
+    <canvas id="canvasWebGL"></canvas>
+    <div>
+        <label>Ось X</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="x-pos-range">
+        <label>Ось Y</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="y-pos-range">
+        <label>Ось Z</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="z-pos-range">
+    </div>
+    <div>
+        <label>Поворот X</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="x-rotate-range">
+        <label>Поворот Y</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="y-rotate-range">
+        <label>Поворот Z</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="z-rotate-range">
+        
+    </div>
+
+    <!-- javascript -->
+    <script src="../js/three.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Monopoly</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+ <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body onload="startGame()">
+  <script src="js/main.js"></script>
+<!-- модальное окно
+  <div class="modal" id="rollDiceModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- игроговое поле -->
+  <div class="game">
+    <div class="players-block" id="players-block">
+      
+    </div>
+    <div class="game-block" id="game-block">
+      <div class="play-field" id="play-field">
+        <!-- top line -->
+      <!-- TODO ПОПРОБОВАТЬ С ПОМОЩЬЮ GRIDа -->
+      <div class="play-cell play-cell-1" id="play-cell-1" onclick="rollDiceModal.open()"><div></div></div>
+      <div class="play-cell play-cell-2 rot-270" id="play-cell-2" onclick="rollDiceModal.close()"><div></div></div>
+      <div class="play-cell play-cell-3 rot-270" id="play-cell-3"><div></div></div>
+      <div class="play-cell play-cell-4 rot-270" id="play-cell-4"><div></div></div>
+      <div class="play-cell play-cell-5 rot-270" id="play-cell-5"><div></div></div>
+      <div class="play-cell play-cell-6 rot-270" id="play-cell-6"><div></div></div>
+      <div class="play-cell play-cell-7 rot-270" id="play-cell-7"><div></div></div>
+      <div class="play-cell play-cell-8 rot-270" id="play-cell-8"><div></div></div>
+      <div class="play-cell play-cell-9 rot-270" id="play-cell-9"><div></div></div>
+      <div class="play-cell play-cell-10 rot-270" id="play-cell-10"><div></div></div>
+      <!-- right line -->
+      <div class="play-cell play-cell-11" id="play-cell-11"><div></div></div>
+      <div class="play-cell play-cell-12" id="play-cell-12"><div></div></div>
+      <div class="play-cell play-cell-13" id="play-cell-13"><div></div></div>
+      <div class="play-cell play-cell-14" id="play-cell-14"><div></div></div>
+      <div class="play-cell play-cell-15" id="play-cell-15"><div></div></div>
+      <div class="play-cell play-cell-16" id="play-cell-16"><div></div></div>
+      <div class="play-cell play-cell-17" id="play-cell-17"><div></div></div>
+      <div class="play-cell play-cell-18" id="play-cell-18"><div></div></div>
+      <div class="play-cell play-cell-19" id="play-cell-19"><div></div></div>
+      <div class="play-cell play-cell-20" id="play-cell-20"><div></div></div>
+      <!-- bottom line -->
+      <div class="play-cell play-cell-21" id="play-cell-21"><div></div></div>
+      <div class="play-cell play-cell-22 rot-270" id="play-cell-22"><div></div></div>
+      <div class="play-cell play-cell-23 rot-270" id="play-cell-23"><div></div></div>
+      <div class="play-cell play-cell-24 rot-270" id="play-cell-24"><div></div></div>
+      <div class="play-cell play-cell-25 rot-270" id="play-cell-25"><div></div></div>
+      <div class="play-cell play-cell-26 rot-270" id="play-cell-26"><div></div></div>
+      <div class="play-cell play-cell-27 rot-270" id="play-cell-27"><div></div></div>
+      <div class="play-cell play-cell-28 rot-270" id="play-cell-28"><div></div></div>
+      <div class="play-cell play-cell-29 rot-270" id="play-cell-29"><div></div></div>
+      <div class="play-cell play-cell-30 rot-270" id="play-cell-30"><div></div></div>
+      <!-- left line -->
+      <div class="play-cell play-cell-31" id="play-cell-31"><div></div></div>
+      <div class="play-cell play-cell-32" id="play-cell-32"><div></div></div>
+      <div class="play-cell play-cell-33" id="play-cell-33"><div></div></div>
+      <div class="play-cell play-cell-34" id="play-cell-34"><div></div></div>
+      <div class="play-cell play-cell-35" id="play-cell-35"><div></div></div>
+      <div class="play-cell play-cell-36" id="play-cell-36"><div></div></div>
+      <div class="play-cell play-cell-37" id="play-cell-37"><div></div></div>
+      <div class="play-cell play-cell-38" id="play-cell-38"><div></div></div>
+      <div class="play-cell play-cell-39" id="play-cell-39"><div></div></div>
+      <div class="play-cell play-cell-40" id="play-cell-40"><div></div></div>
+     
+      <div class="chat-block" id="chat-block"></div>
+      <!-- <input class="roll-dice-btn" id="roll-dice-btn" value="Бросить кубики" onclick="game.rollTheDice()" type="button" data-toggle="modal" data-target="#rollDiceModal"> -->
+ 
+      </div>
+    </div>
+    
+  </div>
+    <!-- TODO -->
+  <div class="modal-info">
+    <div class="modal-info-header">
+      <span class="modal-info-field-name">Название поля</span>
+      <span class="modal-info-monopoly-name">Название монополии</span>
+    </div>
+    <div class="modal-info-body">
+      <div class="modal-info-buttons-block">
+        <div class="modal-info-btn-build"><span>Построить</span></div>
+        <div class="modal-info-btn-deposit"><span>Заложить</span></div>
+      </div>
+      <span class="modal-info-text">Сообщение об аренде</span>
+      <div>
+        <span class="modal-info-text">Базовая рента</span>
+        <span class="modal-info-rent-0">100k</span>
+      </div>
+      <div>
+        <span class="modal-info-base-rent">*</span>
+        <span class="modal-info-rent-1">200k</span>
+      </div>
+      <div>
+        <span class="modal-info-base-rent">**</span>
+        <span class="modal-info-rent-2">300k</span>
+      </div>
+      <div>
+        <span class="modal-info-base-rent">***</span>
+        <span class="modal-info-rent-3">400k</span>
+      </div>
+      <div>
+        <span class="modal-info-base-rent">****</span>
+        <span class="modal-info-rent-4">500k</span>
+      </div>
+      <div>
+        <span class="modal-info-base-rent">@</span>
+        <span class="modal-info-rent-5">600k</span>
+      </div>
+      <div>
+        <span class="modal-info-text">Стоимость поля</span>
+        <span class="modal-info-cost">1000k</span>
+      </div>
+      <div>
+        <span class="modal-info-text">Залог поля</span>
+        <span class="modal-info-deposit">2000k</span>
+      </div>
+      <div>
+        <span class="modal-info-text">Выкуп поля</span>
+        <span class="modal-info-buyback">3000k</span>
+      </div>
+      <div>
+        <span class="modal-info-text">Покупка филиала</span>
+        <span class="modal-info-buying">4000k</span>
+      </div>
+    </div>
+  </div>
+<!-- TODO -->
+
+</body>
+</html>

@@ -1,0 +1,545 @@
+html {
+    overflow: hidden;
+}
+
+:root {
+    --distance1: 0;
+    --distance2: 0;
+    --distance3: 0;
+    --distance4: 0;
+    --distance5: 0;
+    --path1: '';
+    --cell-size: 7.692%; /* (100/11)% размер маленького поля относительно длины стороны поля*/
+   
+  }
+
+body {
+    height:100%;
+    width:100%;
+    background-color:#000000;
+    
+}
+
+.game {
+    margin: 0 auto;
+    width: 1100px;
+    height:100%;
+    background-color:#192124;
+    display: flex;
+}
+
+.players-block {
+    height: 100%;
+    max-width: 30%;
+    background-color:#293d44;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+/* const player_bg_colors = ["#d32020","#07b354","#1e92eb","#a20dff","#dbde23",];
+const player_border_colors = ["#862a2a","#177842","#2475b3","#6c1c9e","#9fa127",] */
+
+
+.player-block {
+    height:18vmin;
+    
+    width:90%;
+    margin-top:10px;
+    background-color:#192124;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.player-block span {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.player-block .name-text {
+    color:#FFF;
+    font-size: 20px;
+}
+
+.player-block .money-text {
+    color:#FFF;
+    font-size: 30px;
+}
+
+.player-block .money-text::before {
+    content: "$";
+    color:#838383;
+}
+
+.player-block .money-text::after {
+    content: "k";
+    color:#838383;
+}
+/* const player_bg_colors = ["#d32020","#07b354","#1e92eb","#a20dff","#dbde23",];
+const player_border_colors = ["#862a2a","#177842","#2475b3","#6c1c9e","#9fa127",] */
+.active:nth-child(1) {
+    background-color:#d32020;
+    outline: 5px solid #862a2a;
+}
+.active:nth-child(2) {
+    background-color:#07b354;
+    outline: 5px solid #177842;
+}
+.active:nth-child(3) {
+    background-color:#1e92eb;
+    outline: 5px solid #2475b3;
+}
+.active:nth-child(4) {
+    background-color:#a20dff;
+    outline: 5px solid #6c1c9e;
+}
+.active:nth-child(5) {
+    background-color:#dbde23;
+    outline: 5px solid #9fa127;
+}
+
+.timer-text {
+    font-size: 15px !important;
+
+    height: 35px;
+    width: 35px;
+
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+
+    position: absolute;
+    top:30px;
+    left:30px;
+}
+
+.player-is-loser {
+    opacity: 0.5;
+}
+
+.game-block {
+    width: 100vmin;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-block{
+    position:absolute;
+    background-color:#192124;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    outline: 2px solid #192124;;
+
+    transition-duration: 3s;
+
+}
+.chat-block::-webkit-scrollbar {display: none;}
+
+
+
+.chat-block p {
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top:15px;
+}
+
+/* .roll-dice-btn {
+    width:144px;
+    height: 72px;
+    position: absolute;
+    bottom: 200px;
+    left: 250px;
+    
+} */
+
+.modal-block.open {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.modal-block {
+    opacity: 0;
+    z-index: -1;
+    margin-left: 50%;
+    transform: translate(-50%);
+    position:absolute;
+    
+    background-color:#fff;
+    border-radius: 10px;
+
+    transition-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.modal-header, .modal-body, .modal-footer {
+    height: 100%;
+    width: 90%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header{
+    font-size: 30px;
+    color:#293d44;
+}
+
+.modal-body {
+    font-size: 15px;
+    color:#838383;
+}
+
+.modal-body p span {
+    background-color: rgb(236, 197, 22);
+    color:rgb(74, 75, 18);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.modal-footer {
+    padding-bottom: 3%;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-size: 30px;
+}
+
+.modal-text {
+
+}
+
+.modal-btn {
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0, 211, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-small-btn {
+    width: 47.5%;
+}
+
+.play-field {
+    width: 90%;
+    height:90%;
+    background-color: #fbffff;
+    position: relative;
+    outline: 5px solid lime;
+}
+
+.play-cell {
+    outline: 2px solid #2d2e38;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.play-cell div {
+    background: center/contain no-repeat; 
+    height: 70%;
+    width:80%;
+}
+
+
+.play-cell img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.play-cell-1 div {
+    background-image: url(../images/brands/special/start.png);
+    height: 100%;
+    width:100%;
+}
+.play-cell-2 div {
+    background-image: url(../images/brands/1/chanel.svg);
+}
+.play-cell-3 div {
+    background-image: url(../images/brands/special/chance_rotated_right.png);
+}
+.play-cell-4 div {
+    background-image: url(../images/brands/1/hugo_boss.svg);
+}
+.play-cell-5 div {
+    background-image: url(../images/brands/special/tax_income.png);
+}
+.play-cell-6 div {
+    background-image: url(../images/brands/0/audi.svg);
+}
+.play-cell-7 div {
+    background-image: url(../images/brands/2/adidas.svg);
+}
+.play-cell-8 div {
+    background-image: url(../images/brands/special/chance_rotated_right.png);
+}
+.play-cell-9 div {
+    background-image: url(../images/brands/2/puma.svg);
+}
+.play-cell-10 div {
+    background-image: url(../images/brands/2/lacoste.svg);
+}
+.play-cell-11 div {
+    background-image: url(../images/brands/special/jail.png);
+    height: 100%;
+    width:100%;
+}
+.play-cell-12 div {
+    background-image: url(../images/brands/3/vk.svg);
+}
+.play-cell-13 div {
+    background-image: url(../images/brands/9/rockstar_games.svg);
+}
+.play-cell-14 div {
+    background-image: url(../images/brands/3/facebook.svg);
+}
+.play-cell-15 div {
+    background-image: url(../images/brands/3/twitter.svg);
+}
+.play-cell-16 div {
+    background-image: url(../images/brands/0/mercedes.svg);
+}
+.play-cell-17 div {
+    background-image: url(../images/brands/4/coca_cola.svg);
+}
+.play-cell-18 div {
+    background-image: url(../images/brands/special/chance_rotated_right.png);
+}
+.play-cell-19 div {
+    background-image: url(../images/brands/4/pepsi.svg);
+}
+.play-cell-20 div {
+    background-image: url(../images/brands/4/fanta.svg);
+}
+.play-cell-21 div {
+    background-image: url(../images/brands/special/jackpot.svg);
+    height: 100%;
+    width:100%;
+}
+.play-cell-22 div {
+    background-image: url(../images/brands/5/american_airlines.svg);
+}
+.play-cell-23 div {
+    background-image: url(../images/brands/special/chance_rotated_right.png);
+}
+.play-cell-24 div {
+    background-image: url(../images/brands/5/lufthansa.svg);
+}
+.play-cell-25 div {
+    background-image: url(../images/brands/5/british_airways.svg);
+}
+.play-cell-26 div {
+    background-image: url(../images/brands/0/ford.svg);
+}
+.play-cell-27 div {
+    background-image: url(../images/brands/6/mcdonalds.svg);
+}
+.play-cell-28 div {
+    background-image: url(../images/brands/6/burger_king.svg);
+}
+.play-cell-29 div {
+    background-image: url(../images/brands/9/rovio.svg);
+}
+.play-cell-30 div {
+    background-image: url(../images/brands/6/kfc.svg);
+}
+.play-cell-31 div {
+    background-image: url(../images/brands/special/goToJail.png);
+    height: 100%;
+    width:100%;
+}
+.play-cell-32 div {
+    background-image: url(../images/brands/7/holiday_inn.svg);
+}
+.play-cell-33 div {
+    background-image: url(../images/brands/7/radisson_blu.svg);
+}
+.play-cell-34 div {
+    background-image: url(../images/brands/special/chance_rotated_left.png);
+}
+.play-cell-35 div {
+    background-image: url(../images/brands/7/novotel.svg);
+}
+.play-cell-36 div {
+    background-image: url(../images/brands/0/land_rover.svg);
+}
+.play-cell-37 div {
+    background-image: url(../images/brands/special/tax_luxury.png);
+}
+.play-cell-38 div {
+    background-image: url(../images/brands/8/apple.svg);
+}
+.play-cell-39 div {
+    background-image: url(../images/brands/special/chance_rotated_left.png);
+}
+.play-cell-40 div {
+    background-image: url(../images/brands/8/nokia.svg);
+}
+
+.rot-270{
+    transform: rotate(270deg);
+    transform-origin: top left;
+}
+
+
+
+
+.red-player, .green-player, .blue-player, .yellow-player, .purple-player {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+    transition: 0.6s ease-in-out;
+
+    offset-path: path(var(--path1));
+}
+.red-player{
+    offset-distance: calc(var(--distance1, 50) * 1%);
+    margin-top: 0px;
+    margin-left: -5px;
+}
+.green-player{
+    offset-distance: calc(var(--distance2, 50) * 1%);
+    margin-top: -5px;
+    margin-left: 0px; 
+} 
+
+.blue-player{
+    offset-distance: calc(var(--distance3, 50) * 1%);
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.purple-player{
+    offset-distance: calc(var(--distance4, 50) * 1%);
+    margin-top: 5px;
+    margin-left: 0px;
+} 
+
+.yellow-player{
+    offset-distance: calc(var(--distance5, 50) * 1%);
+
+}
+
+
+
+.red-text {
+    color:rgb(190, 20, 20)
+}
+
+.green-text {
+    color:#177842;
+}
+
+.blue-text {
+    color:#2475b3;
+}
+
+.purple-text {
+    color: #6c1c9e;
+}
+
+.yellow-text {
+    color: #9fa127;
+}
+
+/* для полей */
+.light-red-bg {
+    background-color:#ea8280;
+}
+
+.light-green-bg {
+    background-color:#b8e58d;
+}
+
+.light-blue-bg {
+    background-color:#6ec5ef;
+}
+
+.light-purple-bg {
+    background-color: #bda1f0;
+}
+
+.light-yellow-bg {
+    background-color: #f6fa00;
+}
+
+/* для фона чилсенной информации полей */
+
+.red-bg- {/* мона 0 */
+background-color: #d84552;
+}
+.pink-bg- {/* мона 1 */
+    background-color: #ec87c0;
+}
+
+.orange-bg- {/* мона 2 */
+    background-color: #dfb438;
+}
+
+.cyan-bg- {/* мона 3 */
+    background-color: #35bc9b;
+}
+
+.blue-bg- {/* мона 4 */
+    background-color: #4a89da;
+}
+
+.green-bg- {/* мона 5 */
+    background-color: #8bc151;
+}
+
+.light-blue-bg- {/* мона 6 */
+    background-color: #4ec1e8;
+}
+
+.purple-bg- {/* мона 7 */
+    background-color: #947bd9;
+}
+
+.grey-bg- {/* мона 8 */
+    background-color: #656d77;
+}
+
+.cherry-bg- {/* мона 9 */
+    background-color: #7e1f0e;
+}
+
+
+
+
+
+/* background: center/contain no-repeat; */

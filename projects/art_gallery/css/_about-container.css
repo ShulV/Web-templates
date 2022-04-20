@@ -1,0 +1,22 @@
+.about {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.about-container__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    max-width: 1080px;
+}
+
+.about-container__heading {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    color: #333333;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    margin-top: 10px;
+}

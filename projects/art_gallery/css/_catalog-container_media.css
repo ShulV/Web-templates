@@ -1,0 +1,177 @@
+@media (max-width: 1600px) {
+    
+
+    .catalog-container__question-list {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    .catalog-container__intro-text {
+        width: 100%;
+    }
+
+    .catalog-container__info-wrapper,
+    .catalog-container__content-accordeon {
+        width: calc(437/925 * 100%);
+    }
+
+    .catalog-container__question-list {
+        max-width: 100%;
+        column-gap: 70px;
+    }
+
+    .catalog-container__question-heading {
+        padding: 41px 80px 41px 0px;
+    }
+
+    .catalog-container__info-artist-name {
+        margin-bottom: 9px;
+    }
+
+    .catalog-container__info-date {
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .catalog-container__intro-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .catalog-container__content {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .catalog-container__info,
+    .catalog-container__content-accordeon {
+        width: 100%;
+    }
+
+    .catalog-container__info-wrapper {
+        padding-top: 51px;
+    }
+
+    .catalog-container__question-list {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+
+    .catalog-container__heading {
+        margin-top: 8px;
+    }
+
+    .catalog-container__question-heading {
+        padding: 41px 80px 40px 0px;
+    }
+    
+    .catalog-container__info-wrapper, .catalog-container__content-accordeon {
+        width: 100%;
+    }
+
+    .catalog-container__info-date,
+    .catalog-container__info-text {
+        margin-left: 1px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .no-content {
+        height: 130px;
+    }
+
+    .no-content-left {
+        width: 90px;
+    }
+
+    .no-content-left::before {
+        top: 4px;
+        right: 4px;
+        bottom: 4px;
+        left: 4px;
+    }
+
+    .no-content-right {
+        width: 175px;
+    }
+    
+    .catalog-container__intro-text {
+        display: none;
+    }
+
+    .catalog-container__question-heading {
+        padding: 20px 80px 20px 0;
+    }
+
+    .catalog-container__question-list {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    .catalog-container__heading {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .catalog-container__question-list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .catalog-container__question-heading-text-wrap {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .catalog-container__info-text {
+        padding-right: 1px;
+    }
+
+    .head-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .catalog-container__heading {
+        margin-top: 0px;
+        margin-bottom: 13px;
+    }
+
+    .catalog-container__question-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .catalog {
+        padding-top: 50px;
+    }
+
+    .catalog-container__heading {
+        margin-top: -1px;
+    }
+
+    .catalog-container__question-heading {
+        padding: 20px 80px 19px 0;
+    }
+
+    .catalog-container__info-img {
+        margin-bottom: 19px;
+    }
+
+    .catalog-container__info-artist-name {
+        margin-bottom: 14px;
+    }
+
+    .catalog-container__info-date, .catalog-container__info-text {
+        margin-left: 0px;
+    }
+}

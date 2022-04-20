@@ -1,0 +1,215 @@
+.events {
+    padding-top: 80px;
+}
+
+.events-container__swiper {
+    position: relative;
+}
+
+.events-container__nav-btn {
+    position: relative;
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.events-container__swiper-prev-btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.events-container__swiper-next-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: 10;
+}
+
+.events-container__nav-btn::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 12px / 2);
+    width: 12px;
+    height: 12px;
+    transform-origin: center;
+}
+
+.events-container__swiper-next-btn::before {
+    left: calc(50% - 12px / 2);
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.events-container__swiper-prev-btn::before {
+    left: calc(50% - 12px / 2);
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: translateX(25%) rotate(45deg);
+}
+
+.events-container__swiper-prev-btn:hover,
+.events-container__swiper-next-btn:hover {
+    background-color: #D1A9F0;
+}
+
+.events-container__swiper-prev-btn:focus,
+.events-container__swiper-next-btn:focus {
+    outline: 2px solid var(--medium-purple);
+    
+}
+
+.events-container__swiper-prev-btn:active,
+.events-container__swiper-next-btn:active {
+    outline: 2px solid var(--medium-purple);
+    background-color: #D1A9F0;
+}
+
+.events-container__nav-btn.swiper-button-disabled {
+    opacity: 0;
+}
+
+.events-container__swiper-container {
+    overflow: hidden;
+}
+
+.events-container__slide {
+    width: calc(500/1600 * 100%);
+    min-height: 700px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.events-container__slide:focus {
+    border-color: var(--dark-purple);
+}
+
+.events-container__slide-picture {
+    display: block;
+}
+
+.events-container__slide-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.events-container__slider-main-text {
+    font-size: 16px;
+    line-height: 2em;
+}
+
+.events-container__slide-text-content {
+    border: 1px solid #CACACA;
+    border-top-width: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding: 14px 49px 43px 49px;
+}
+
+.events-container__slide-image-desc {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    margin-bottom: 13px;
+}
+
+.events-container__slide-heading {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.events-container__slide-detailed-link {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--medium-purple);
+    margin-top: auto;
+    padding-top: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.events-container__slide-detailed-link > div {
+    position: relative;
+}
+
+.events-container__slide-detailed-link > div::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    height: 1px;
+    width: calc(100% - 4px);
+    background: var(--medium-purple);
+    
+}
+
+.events-container__slide-detailed-link:hover > div{
+    color: var(--dark-purple);
+}
+
+.events-container__slide-detailed-link:focus > div{
+    color: #fff;
+    background-color: var(--medium-purple);
+    padding: 2px 8px;
+    margin-left: -8px;
+}
+
+.events-container__slide-detailed-link:active > div {
+    color: #000;
+}
+
+.events-container__pagination {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.events-container__pagination .swiper-pagination-bullet {
+    background-color: #CACACA;
+    opacity: 1;
+}
+
+.events-container__pagination .swiper-pagination-bullet-active {
+    background-color: #666666;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 15px ;
+}
+
+.events-container__heading {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    color: #333333;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}

@@ -1,0 +1,64 @@
+:root {
+    --scroll-anim-time: 2s;
+}
+
+.scroll-anim {
+    position: absolute;
+    top: calc(100% - 7vw);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5vw;
+    width: 5vw;
+}
+
+.scroll-anim__img-up,
+.scroll-anim__img-down {
+    opacity: 0;
+    height: 50%;
+    width: 100%;
+
+
+}
+
+.scroll-anim__img-up {
+    animation: scroll-img-up var(--scroll-anim-time) linear infinite;
+}
+
+.scroll-anim__img-down {
+    animation: scroll-img-down var(--scroll-anim-time) linear infinite;
+}
+
+@keyframes scroll-img-up {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes scroll-img-down {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+
+}

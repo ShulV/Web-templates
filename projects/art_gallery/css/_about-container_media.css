@@ -1,0 +1,36 @@
+@media (max-width: 1600px) {
+    .about {
+        padding-bottom: 69px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-container__heading {
+        margin-top: 9px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-container__text {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .about-container__heading {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-container__heading {
+        margin-top: 0;
+        margin-bottom: 13px;
+    }
+
+    .about {
+        padding-top: 52px;
+        padding-bottom: 41px;
+    }
+}

@@ -1,0 +1,199 @@
+.header-top {
+  background: #000;
+}
+
+.ht-container {
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+.ht-container__logo {
+  margin-right: 40px;
+  margin-top: 3px;
+}
+
+.ht-container__logo-img {
+  width: 173px;
+}
+
+.ht-container__nav {
+  min-width: calc(1253/1600 * 100%);
+}
+
+.ht-container__nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ht-container__nav-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ht-container__li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.ht-container__li-a {
+  padding: 2px 6px;
+  transition: color 0.3s ease;
+}
+
+.ht-container__li-a:focus {
+  background: var(--dark-purple);
+}
+
+.ht-container__li-a:hover {
+  background: none;
+  color: var(--light-purple);
+}
+
+.ht-container__li-a:active {
+  background: none;
+  color: var(--medium-purple);
+}
+
+.ht-container__login {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  padding-left: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  margin-right: -7px;
+}
+
+.ht-container__login:focus {
+  background-color: var(--dark-purple);
+}
+
+.ht-container__login:hover {
+  background-color: transparent;
+  color: var(--light-purple);
+}
+
+
+.ht-container__login:active {
+  color: var(--medium-purple);
+}
+
+.ht-container__login::before {
+  content: '';
+  width: 18px;
+  height: 13px;
+  background-image: url('../images/Login-icon.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+  position: absolute;
+  right: calc(100% - 22px);
+}
+
+.ht-container__login:hover::before {
+  content: '';
+  background-image: url('../images/Login-icon-light-purple.svg');
+}
+
+.ht-container__login:active::before {
+  content: '';
+  background-image: url('../images/Login-icon-medium-purple.svg');
+}
+
+.ht-container__search-form {
+  display: none;
+  position: absolute;
+  right: 0;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 314px;
+  height: 36px;
+}
+
+.ht-container__search-form-wrapper {
+  display: none;
+  position: relative;
+}
+
+.ht-container__search {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  padding: 0;
+  height: 29px;
+  width: 30px;
+  background-color: transparent;
+  background-image: url("../images/Search.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.ht-container__search-form-btn {
+  transition: background-image 0.3s ease-in-out;
+}
+
+.ht-container__search:focus,
+.ht-container__search-form-btn:focus {
+  background-image: url('../images/Search-light-purple.svg');
+}
+
+.ht-container__search:active,
+.ht-container__search-form-btn:active {
+  background-image: url('../images/Search-medium-purple.svg');
+}
+
+.ht-container__search:hover,
+.ht-container__search-form-btn:hover {
+  background-image: url('../images/Search-medium-purple.svg');
+}
+
+.ht-container__search-form-text:focus {
+  border-color: var(--medium-purple);
+}
+
+.ht-container__form-exit-btn::after,
+.ht-container__form-exit-btn::before {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.ht-container__form-exit-btn:hover::after,
+.ht-container__form-exit-btn:hover::before {
+    background-color: var(--dark-purple);
+}
+
+.ht-container__form-exit-btn:focus::after,
+.ht-container__form-exit-btn:focus::before {
+    background-color: var(--medium-purple);
+}
+
+.ht-container__form-exit-btn:focus::after,
+.ht-container__form-exit-btn:focus::before {
+    background-color: var(--light-purple);
+}

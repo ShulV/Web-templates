@@ -1,0 +1,263 @@
+.projects {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.projects-container__text-content {
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    max-width: 1075px;
+    margin-bottom: 21px;
+}
+
+.projects-container__text-content-link {
+
+    color: var(--medium-purple);
+}
+
+.projects-container__text-content-link:hover {
+
+    border-bottom: 1px solid var(--medium-purple);
+}
+
+.projects-container__text-content-link:focus {
+    padding: 2px 5px;
+    margin-left: -5px;
+    background-color: var(--medium-purple);
+    color: #fff;
+}
+
+.projects-container__text-content-link:active {
+    background-color: transparent;
+    color: var(--dark-purple);
+}
+
+.projects-container__link-projects {
+    display: inline;
+}
+
+.projects-container__link-about {
+    display: none;
+}
+
+.projects-container__tooltip {
+    position: relative;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-end;
+    flex: 0 0 auto;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px;
+    margin-left: -1px;
+    margin-right: 1px;
+
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    transition-duration: .3s;
+    transition-property: color, background-color;
+    border-radius: 50%;
+    border: 1px solid var(--medium-purple);
+}
+
+.projects-container__tooltip::after,
+.projects-container__tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.48px;
+    height: 9.54px;
+    background-color: transparent;
+    transition-timing-function: ease;
+    transition-duration: .3s;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.projects-container__tooltip::before {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.projects-container__tooltip:hover {
+    background-color: var(--medium-purple);
+    color: transparent;
+}
+
+.projects-container__tooltip:hover::before,
+.projects-container__tooltip:hover::after {
+    display: block;
+    background: #fff;
+}
+
+.tippy-box[data-theme~='custom-tooltip-theme'] {
+    max-width: 265px !important;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #fff;
+
+    border-radius: 0;
+    background-color: var(--medium-purple);
+    inset: unset;
+}
+
+.tippy-box[data-theme~='custom-tooltip-theme'][data-placement^='top']>.tippy-arrow::before {
+    top: 13px;
+    border-top: 10px solid var(--medium-purple);
+}
+
+.projects-container__project-partners-heading {
+    margin-bottom: 22px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.projects-container__swiper,
+.projects-container__swiper-container,
+.projects-container__swiper-wrapper,
+.projects-container__slide,
+.projects-container__slide-image {
+    max-height: 150px;
+}
+
+.projects-container__swiper {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-container__swiper-container {
+    overflow: hidden;
+    max-width: calc(1450/1600 * 100%);
+}
+
+.projects-container__slide {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: calc(450/1600 * 100%);
+    border: 1px solid #CACACA;
+}
+
+.projects-container__slide-image {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 0.3;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects-container__slide:focus {
+    border: 1px solid var(--medium-purple);
+    opacity: 1;
+}
+
+.projects-container__slide:hover .projects-container__slide-image,
+.projects-container__slide:active .projects-container__slide-image {
+    -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.projects-container__slide:active {
+    border: 1px solid var(--medium-purple);
+}
+
+.projects-container__nav-btn {
+    position: relative;
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.projects-container__nav-btn::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 7px / 2);
+    width: 7px;
+    height: 7px;
+    transform-origin: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.projects-container__swiper-next-btn::before {
+    left: calc(50% - 5px / 2);
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.projects-container__swiper-prev-btn::before {
+    left: calc(50% - 10px / 2);
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: translateX(25%) rotate(45deg);
+}
+
+.projects-container__nav-btn:hover {
+    background-color: #D1A9F0;
+}
+
+.projects-container__nav-btn:focus {
+    outline: 2px solid var(--medium-purple);
+    
+}
+
+.projects-container__nav-btn:active {
+    outline: 2px solid var(--medium-purple);
+    background-color: #D1A9F0;
+}
+
+.projects-container__nav-btn.swiper-button-disabled,
+.projects-container__nav-btn.swiper-button-disabled:hover,
+.projects-container__nav-btn.swiper-button-disabled:focus,
+.projects-container__nav-btn.swiper-button-disabled:active {
+    outline-width: 0px;
+    cursor: default;
+}
+
+.projects-container__nav-btn.swiper-button-disabled::before,
+.projects-container__nav-btn.swiper-button-disabled:hover::before,
+.projects-container__nav-btn.swiper-button-disabled:focus::before,
+.projects-container__nav-btn.swiper-button-disabled:active::before,
+.projects-container__nav-btn.swiper-button-disabled::after,
+.projects-container__nav-btn.swiper-button-disabled:hover::after,
+.projects-container__nav-btn.swiper-button-disabled:focus::after,
+.projects-container__nav-btn.swiper-button-disabled:active::after {
+    border-color: #BBBBBB;
+}
+
+.projects-container__nav-btn.swiper-button-disabled {
+    opacity: 1;
+    background-color: #ECECEC;
+}
+
+.projects-container__heading {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    color: #333333;
+    margin-top: 10px;
+    margin-bottom: 23px;
+}

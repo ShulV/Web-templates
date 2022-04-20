@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Строительная компания «СК Профлигастрой» предоставляет ряд строительных работ любой сложной.">
+  <meta name="keywords" content="строительство, стройка, монтаж, ремонт">
+  <title>СК Профлигастрой - строительно-монтажные работы любой сложности</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <!--  -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/splide.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/mobile-tablet.css" />
+  <link rel="stylesheet" href="css/scroll-animation.css">
+  <!-- JS -->
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script src="./js/splide.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a37614ea-74b8-47b4-8422-9eab03627e68&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./js/yandex-map_init.js"></script>
+
+  <style>
+    @media (max-width: 1023px) {
+      .main-desktop {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .main-mobile-tablet {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- 1024-1920px -->
+    <div class="main-desktop">
+      <!-- ЛЕВЫЙ СЛАЙДЕР БЛОКОВ -->
+      <div class="left-col">
+        <div id="splide-left" class="splide main-splide splide-left">
+          <div class="splide__track main-splide__track">
+            <div class="splide__list main-splide__list">
+              <!-- ЛЕВЫЙ - 1 -->
+              <section class="splide__slide main-splide__slide left-sect-1">
+                <span>СТРОИМ ВМЕСТЕ</span>
+              </section>
+              <!-- ЛЕВЫЙ - 2 -->
+              <section class="splide__slide main-splide__slide left-sect-2">
+
+                <div id="tab-splide" class="splide tab-splide">
+                  <div class="splide__track tab-splide__track">
+                    <ul class="splide__list tab-splide__list">
+                      <li class="splide__slide tab-splide__slide"></li>
+                      <li class="splide__slide tab-splide__slide"></li>
+                      <li class="splide__slide tab-splide__slide"></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="left-sect-2__tabs">
+                  <div class="left-sect-2__tab left-sect-2__tab_active">
+
+                    <div class="left-sect-2__subtab">
+                      <div class="left-sect-2__tab-btn"></div>
+                      <div class="left-sect-2__tab-all-text">
+                        <h2 class="left-sect-2__tab-header">СТРОИТЕЛЬСТВО</h2>
+                        <p class="left-sect-2__tab-text">Возведение зданий и сооружений, а
+                          также их капитальный и текущий ремонт, реконструкция, реставрация и реновация.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="left-sect-2__tab">
+
+                    <div class="left-sect-2__subtab">
+                      <div class="left-sect-2__tab-btn"></div>
+                      <div class="left-sect-2__tab-all-text">
+                        <h2 class="left-sect-2__tab-header">РЕМОНТ</h2>
+                        <p class="left-sect-2__tab-text">Выполняем строительно-монтажные, электромонтажные,
+                          кондиционирование, вентиляционные и охранно-пожарную систематизацию (ОПС) работы.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="left-sect-2__tab">
+
+                    <div class="left-sect-2__subtab">
+                      <div class="left-sect-2__tab-btn"></div>
+                      <div class="left-sect-2__tab-all-text">
+                        <h2 class="left-sect-2__tab-header">ОТДЕЛКА</h2>
+                        <p class="left-sect-2__tab-text">Комплекс строительных работ, связанных с&nbsp;наружной и
+                          внутренней отделкой зданий с&nbsp;целью повышения их эксплуатации.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </section>
+              <!-- ЛЕВЫЙ - 3 -->
+              <section class="splide__slide main-splide__slide left-sect-3">
+                <div class="left-sect-3__text-block">
+                  <h2 class="left-sect-3__header-1">Наши преимущества</h2>
+                  <h3 class="left-sect-3__header-2">Качество <br>важно</h3>
+                  <p class="left-sect-3__text">Развивая нашу компанию, мы постоянно повышаем эффективность процессов и
+                    профессионализм наших сотрудников, стараясь предложить нашим Клиентам самые современные решения
+                    качества.</p>
+                </div>
+              </section>
+              <!-- ЛЕВЫЙ - 4 -->
+              <section class="splide__slide main-splide__slide left-sect-4">
+                <div class="left-sect-4__contacts-block">
+                  <h2 class="left-sect-4__header">КОНТАКТЫ</h2>
+                  <h3 class="left-sect-4__header-2">Главный офис:</h3>
+                  <p class="left-sect-4__address">125438, г. Москва, 4-й Лихачевский <br>пер., д.4, стр.4, этаж 4,
+                    помещение 1А</p>
+
+                  <a class="left-sect-4__phone-1" href="tel:+74952274050">+7(495)227-40-50</a>
+                  <a class="left-sect-4__phone-2" href="tel:+79852274050">+7(985)227-40-50</a>
+
+                  <p class="left-sect-4__email-1">pls-krayushkin@yandex.ru</p>
+                  <p class="left-sect-4__email-2">info@profligastroi.ru</p>
+                </div>
+
+                <div class="left-sect-4__map" id="desk-map-1"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ПРАВЫЙ СЛАЙДЕР БЛОКОВ -->
+      <div class="right-col">
+        <div id="splide-right" class="splide main-splide splide-right">
+          <div class="splide__track main-splide__track">
+            <div class="splide__list main-splide__list">
+              <!-- ПРАВЫЙ - 1 -->
+              <section class="splide__slide main-splide__slide right-sect-1">
+                <span>БУДУЩЕЕ<br>НА ВЕКА</span>
+              </section>
+              <!-- ПРАВЫЙ - 2 -->
+              <section class="splide__slide main-splide__slide right-sect-2">
+                <span>ВСЕГДА<br>В СРОК</span>
+              </section>
+              <!-- ПРАВЫЙ - 3 -->
+              <section class="splide__slide main-splide__slide right-sect-3">
+                <div class="right-sect-3__text-block">
+                  <h2 class="right-sect-3__header-1">ИНФОРМАЦИЯ</h2>
+                  <h3 class="right-sect-3__header-2">О нашей <br>компании</h3>
+                  <p class="right-sect-3__text">Компания ООО «СК Профлигастрой» основана в 2018 году и оказывает услуги
+                    в
+                    Москве и Московской области. Развивая нашу компанию, мы постоянно повышаем эффективность процессов и
+                    профессионализм наших сотрудников, стараясь предложить нашим Клиентам самые современные решения
+                    высокого качества.</p>
+                </div>
+              </section>
+              <!-- ПРАВЫЙ - 4 -->
+              <section class="splide__slide main-splide__slide right-sect-4">
+                <div class="right-sect-4__splider-wrapper">
+                  <div id="btn-splide" class="splide btn-splide">
+                    <div class="splide__track btn-splide__track">
+                      <ul class="splide__list btn-splide__list">
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-1.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-2.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-3.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-4.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-5.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-6.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-7.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-8.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-9.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-10.jpg');"></li>
+                        <li class="splide__slide btn-splide__slide" style="background-image: url('./img/btn-slider-img-11.jpg');"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="down-block">
+                  <div class="down-block__labels">
+                    <p class="down-block__label down-block__label_active">Готовый магазин “Fresh Frost”</p>
+                    <p class="down-block__label">Готовый магазин “Fresh Frost”</p>
+                    <p class="down-block__label">Готовый магазин “Красное и Белое” с мебелью</p>
+                    <p class="down-block__label">Готовый магазин “Красное и Белое” с мебелью</p>
+                    <p class="down-block__label">Фасад магазина “Красное и Белое”</p>
+                    <p class="down-block__label">Фасад магазина “Красное и Белое”</p>
+                    <p class="down-block__label">Строительно-монтажные работы</p>
+                    <p class="down-block__label">Строительно-монтажные работы</p>
+                    <p class="down-block__label">Ремонт цехов</p>
+                    <p class="down-block__label">Электромонтажные работы</p>
+                    <p class="down-block__label">Электромонтажные работы</p>
+                  </div>
+                  <div class="down-block__buttons">
+                    <div class="down-block__btn-left" id="splider-btn-left"></div>
+                    <div class="down-block__btn-right" id="splider-btn-right"></div>
+                  </div>
+                </div>
+
+              </section>
+              <!-- ПРАВЫЙ - 5 -->
+              <section class="splide__slide main-splide__slide right-sect-5">
+                <div class="right-sect-5__up-block">
+                  <h2 class="right-sect-5__header">ХОТИТЕ С НАМИ РАБОТАТЬ?<br><span
+                      class="right-sect-5__header_orange">ЗАПОЛНИТЕ ФОРМУ</span></h2>
+                  <form action="/ajax/mail.php" method="POST" class="right-sect-5__form" id="mailForm">
+                    <div class="input-label input-label-name">
+                      <label class="right-sect-5__form-name-label" id="formNameLabel">&nbsp;</label>
+                      <input type="text" placeholder="Представьтесь, пожалуйста" id="formName"
+                        class="right-sect-5__form-name">
+                    </div>
+                    <div class="input-label input-label-phone">
+                      <label class="right-sect-5__form-phone-label" id="formPhoneLabel">&nbsp;</label>
+                      <input type="tel" placeholder="Телефон" id="formPhone" class="right-sect-5__form-phone">
+                    </div>
+                    <div class="input-label input-label-email">
+                      <label class="right-sect-5__form-email-label" id="formEmailLabel">&nbsp;</label>
+                      <input type="email" placeholder="Email" id="formEmail" class="right-sect-5__form-email">
+                    </div>
+                    <div class="input-label input-label-message">
+                      <label class="right-sect-5__form-message-label" id="formMessageLabel">&nbsp;</label>
+                      <textarea placeholder="Коротко о вашем проекте" id="formMessage"
+                        class="right-sect-5__form-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="right-sect-5__down-block">
+                  <div class="right-sect-5__down-block-btn-container">
+                    <input type="button" value="Отправить" id="sendMail" class="right-sect-5__form-btn">
+                    <p class="right-sect-5__form-warning">Отправляя форму, вы соглашаетесь с <span
+                        class="right-sect-5__form-warning_link">политикой</span> обработки
+                      и <span class="right-sect-5__form-warning_link">использования</span> персональных данных.
+                    </p>
+                  </div>
+                  <p class="right-sect-5__copyright">&copy; Copyright ООО «СК Профлигстрой», 2021. All rigchts reserved
+                  </p>
+
+                  <a href="https://anivia.ru/" target="_blank" class="right-sect-5__site-dev-logo"><div>Разработка сайта</div><img src="./img/dev_logo.png" alt="anivia"></a>
+
+
+                </div>
+
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LOGO -->
+      <img class="main__logo" src="./img/logo.png" alt="ПрофЛигаСтрой">
+    </div>
+    <!-- 320-1023px -->
+    <div class="main-mobile-tablet">
+      <!-- HEADER -->
+      <header class="container mob-header">
+        <img src="./img/mob-logo.png" alt="ПРОФ ЛИГА СТРОЙ" class="mob-header__logo">
+        <div class="mob-header__text">По всем вопросам писать:<br>info@profligastroi.ru</div>
+      </header>
+      <!-- СЕКЦИЯ РАБОТА-ЗАБОТА -->
+      <section class="container mob-work">
+        <h2 class="mob-heading mob-work__heading">
+          <span>СТРОИТЕЛЬНАЯ РАБОТА</span><br>
+          <span class="mob-heading-underline">ЭТО НАША ЗАБОТА</span>
+        </h2>
+        <p class="mob-work__text">Компания ООО «СК Профлигастрой» основана в 2018 году и оказывает услуги в Москве и
+          Московской области.</p>
+        <a class="mob-work__call-btn" href="tel:+74952274050">Позвонить</a>
+      </section>
+      <!-- СЕКЦИЯ УСЛУГИ-->
+      <section class="container mob-services">
+        <h2 class="mob-heading mob-services__heading"><span class="mob-heading-underline">НАШИ УСЛУГИ</span></h2>
+        <div class="mob-services__blocks">
+          <div class="mob-services__block">
+            <img src="./img/mob-service-1.jpg" alt="чертеж" class="mob-services__block-img">
+            <div class="mob-services__block-text">
+              <h3 class="mob-services__block-text-heading">ПРОЕКТНЫЕ РАБОТЫ</h3>
+              <p class="mob-services__block-text-text">Копмлекс работ по выбору технического решения, оценке типа
+                оборудования, расчету систем, составлению чертежей и полной разработке проекта. </p>
+            </div>
+          </div>
+          <div class="mob-services__block">
+            <img src="./img/mob-service-2.jpg" alt="строительство" class="mob-services__block-img">
+            <div class="mob-services__block-text">
+              <h3 class="mob-services__block-text-heading">СТРОИТЕЛЬСТВО ЗДАНИЙ</h3>
+              <p class="mob-services__block-text-text">Возведение зданий и сооружений, а также их капитальный и текущий
+                ремонт, реконструкция, реставрация и реновация.</p>
+            </div>
+          </div>
+          <div class="mob-services__block">
+            <img src="./img/mob-service-3.jpg" alt="отделка" class="mob-services__block-img">
+            <div class="mob-services__block-text">
+              <h3 class="mob-services__block-text-heading">ОТДЕЛОЧНЫЕ РАБОТЫ</h3>
+              <p class="mob-services__block-text-text">Комплекс строительных работ, связанных с наружной и внустринней
+                отделкой зданий с целью повышения их эксплуатации.</p>
+            </div>
+          </div>
+          <div class="mob-services__block">
+            <img src="./img/mob-service-4.jpg" alt="ремонт" class="mob-services__block-img">
+            <div class="mob-services__block-text">
+              <h3 class="mob-services__block-text-heading">РЕМОНТНЫЕ РАБОТЫ</h3>
+              <p class="mob-services__block-text-text">Комплекс мероприятий по восстановлению работоспособного или
+                исправного состояния объекта и восстановлению его ресурса.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mob-services__bottom-bg"></div>
+      <!-- СЕКЦИЯ КАЧЕСТВО -->
+      <section class="container mob-quality">
+        <h2 class="mob-quality__heading">Качество <span class="mob-quality__heading_orange">важно</span></h2>
+        <p class="mob-quality__text">Развивая нашу компанию, мы постоянно повышаем эффективность процессов и
+          профессионализм наших сотрудников, стараясь предложить нашим Клиентам самые современные решения высокого
+          качества.</p>
+        <div class="mob-quality__blocks">
+          <div class="mob-quality__block">
+            <img src="./img/quality_helmet.png" alt="безопасность" class="mob-quality__block-img">
+            <h3 class="mob-quality__block-heading">Безопасность</h3>
+            <p class="mob-quality__block-text">Соблюдение норм промышленной безопасности.</p>
+          </div>
+          <div class="mob-quality__block">
+            <img src="./img/quality_price.png" alt="цена" class="mob-quality__block-img">
+            <h3 class="mob-quality__block-heading">ЦЕНА</h3>
+            <p class="mob-quality__block-text">Гибкая ценовая политика позволяет подобрать оптимальный вариант.</p>
+          </div>
+          <div class="mob-quality__block">
+            <img src="./img/quality_check.png" alt="документация" class="mob-quality__block-img">
+            <h3 class="mob-quality__block-heading">ДОКУМЕНТАЦИЯ</h3>
+            <p class="mob-quality__block-text">Полный объем исполнительной документации.</p>
+          </div>
+        </div>
+      </section>
+      <!-- СЕКЦИЯ КОНТАКТЫ-->
+      <section class="container mob-contacts">
+        <h2 class="mob-heading mob-contacts__heading"><span class="mob-heading-underline">КОНТАКТЫ</span></h2>
+        <h3 class="mob-contacts__subheading">Главный офис:</h3>
+        <p class="mob-contacts__address">125438, г. Москва, 4-й Лихачевский пер., д.4, стр.4, этаж 4, помещение 1А</p>
+        <div class="mob-contacts__contacts-block">
+          <div class="mob-contacts__phones">
+            <a class="mob-contacts__phone-1" href="tel:+74952274050">+7(495)227-40-50</a>
+            <a class="mob-contacts__phone-2" href="tel:+79852274050">+7(985)227-40-50</a>
+          </div>
+          <div class="mob-contacts__emails">
+            <p class="mob-contacts__email-1">pls-krayushkin@yandex.ru</p>
+            <p class="mob-contacts__email-2">info@profligastroi.ru</p>
+          </div>
+        </div>
+
+      </section>
+      <!-- YANDEX MAP -->
+      <div class="mob-contacts__map" id="mob-map-1"></div>
+      <!-- ФОРМА -->
+      <section class="container mob-form-section">
+        <h2 class="mob-form-section__header">ХОТИТЕ С НАМИ РАБОТАТЬ?<br>ЗАПОЛНИТЕ ФОРМУ</h2>
+        <form action="/ajax/mail.php" method="POST" class="mob-form" id="mob_mailForm">
+          <div class="mob-input-label mob-input-label-name">
+            <label class="mob-form__name-label" id="mob_formNameLabel">Представьтесь, пожалуйста<span
+                id="nameStar">*</span></label>
+            <input type="text" id="mob_formName" class="mob-form__name">
+          </div>
+          <div class="mob-input-label mob-input-label-phone">
+            <label class="mob-form__phone-label" id="mob_formPhoneLabel">Телефон<span id="phoneStar">*</span></label>
+            <input type="tel" id="mob_formPhone" class="mob-form__phone">
+          </div>
+          <div class="mob-input-label mob-input-label-email">
+            <label class="mob-form__email-label" id="mob_formEmailLabel">Email<span id="emailStar">*</span></label>
+            <input type="email" id="mob_formEmail" class="mob-form__email">
+          </div>
+          <div class="mob-input-label mob-input-label-message">
+            <label class="mob-form__message-label" id="mob_formMessageLabel">Коротко о вашем проекте<span
+                id="msgStar">*</span></label>
+            <textarea id="mob_formMessage" class="mob-form__text"></textarea>
+          </div>
+        </form>
+        <div class="mob-form__btn-container">
+          <input type="button" value="Отправить" id="mob_sendMail" class="mob-form__btn">
+          <p class="mob-form__warning">Отправляя форму, вы соглашаетесь с <span
+              class="mob-form__warning_link">политикой</span> обработки
+            и <span class="mob-form__warning_link">использования</span> персональных данных.
+          </p>
+        </div>
+      </section>
+
+      <!--  -->
+    </div>
+    <!--  -->
+    <div class="scroll-anim" id="scroll-anim">
+      <img class="scroll-anim__img-up" src="img/scroll_anim_check.png" alt="1">
+      <img class="scroll-anim__img-down" src="img/scroll_anim_check.png" alt="2">
+    </div>
+    <!--  -->
+  </main>
+  <script src="./js/block-animation.js"></script>
+  <script src="./js/formMail.js"></script>
+  <script src="./js/mob_formMail.js"></script>
+</body>
+
+</html>
