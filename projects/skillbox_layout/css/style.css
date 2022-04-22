@@ -1,0 +1,629 @@
+:root {
+  --blue: #3f2aff;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* ---------- ---------- ---------- ---------- HEADER ---------- ---------- ---------- ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.header__logo {
+  font-size: 22px;
+}
+
+.header__nav-list {
+  align-items: center;
+  flex-direction: row;
+
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header__nav-burger {
+  cursor: pointer;
+}
+
+/* ---------- ---------- ---------- ---------- CHOICES_BLOCK ---------- ---------- ---------- ---------- */
+
+.choice-course {
+  display: flex;
+  align-items: center;
+
+  height: 620px;
+
+  color: var(--white);
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+}
+
+.choice-course__heading {
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.choice-course__text {
+  margin-top: 30px;
+
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.choice-course__btn {
+  display: flex;
+  justify-content: center;
+
+  width: 270px;
+  margin-top: 70px;
+  padding: 24px 75px;
+
+  cursor: pointer;
+
+  color: var(--white);
+  border-radius: 20px;
+  background: var(--blue);
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+/* ---------- ---------- ---------- ---------- BENEFITS_BLOCK ---------- ---------- ---------- ---------- */
+
+.benefits__img {
+  display: flex;
+  align-items: center;
+}
+
+.benefits__heading {
+  color: #2E2B44;
+}
+
+.benefits__text-p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666666;
+}
+
+.benefits__markers {
+  margin-top: 30px;
+}
+
+/* ---------- ---------- ---------- ---------- TEACHERS_BLOCK ---------- ---------- ---------- ---------- */
+
+.teachers {
+  background: #212133;
+}
+
+.teachers__teacher-photo {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.teachers__heading {
+  color: var(--white);
+}
+
+.teachers__teacher-photo {
+  width: 100%;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.teachers__teacher-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--white);
+
+  margin-top: 30px;
+}
+
+.teachers__teacher-desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #85859B;
+
+  margin-top: 15px;
+}
+
+/* ---------- ---------- ---------- ---------- COURSES_BLOCK ---------- ---------- ---------- ---------- */
+
+.courses__block:nth-child(n+3) {
+  margin-top: 30px;
+}
+
+.courses__block-content {
+  background: #EDF0F9;
+  border-radius: 20px;
+  height: 480px;
+  position: relative;
+}
+
+.courses__course-duration {
+  position: absolute;
+  top: 13px;
+  right: 18px;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.courses__course-duration img {
+  margin-right: 7px;
+}
+
+.courses__block-picture {
+  display: block;
+  height: 180px;
+  width: 100%;
+}
+
+.courses__block-picture img,
+.courses__block-picture source {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.courses__text-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100% - 180px);
+}
+
+.courses__block-heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: #212133;
+}
+
+.courses__block-text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #666666;
+  margin-top: 15px;
+}
+
+.courses__block-detailed-btn {
+  display: flex;
+  align-items: center;
+  padding: 20.5px 59px;
+  width: 202px;
+  height: 60px;
+  background: var(--blue);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* ---------- ---------- ---------- ---------- SOCIALS_BLOCK ---------- ---------- ---------- ---------- */
+
+.socials {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2E2B44;
+}
+
+.socials a {
+  display: block;
+}
+
+.socials a:not(:first-child) {
+  margin-left: 35px;
+}
+
+/*  */
+
+.skillbox-footer {
+  height: 18px;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #2E2B44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillbox-footer span{
+  padding: 0 5px;
+  color: var(--blue);
+}
+
+/* ---------- ---------- ---------- ---------- ОБЩЕЕ (ЗАГОЛОВКИ) ---------- ---------- ---------- ---------- */
+
+.heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+/* ---------- ---------- ---------- ---------- * ---------- ---------- ---------- ---------- */
+
+@media (max-width: 575px) {
+  /* ---------- ---------- HEADER ---------- ---------- */
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 80px;
+  }
+
+  .header__nav-list {
+    position: absolute;
+    z-index: 100;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+
+    color: var(--blue);
+    background-color: var(--white);
+
+    font-size: 26px;
+  }
+
+  .hedaer__nav-item {
+    width: 100%;
+    height: 25%;
+
+    border-bottom: 1px solid var(--blue);
+  }
+
+  .hedaer__nav-item:hover,
+  .hedaer__nav-item:focus,
+  .hedaer__nav-item:active {
+    color: var(--white);
+    outline: 1px solid var(--white);
+    background-color: var(--blue);
+  }
+
+  .hedaer__nav-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ---------- ---------- CHOICES_BLOCK ---------- ---------- */
+
+  .choice-course {
+    height: 353px;
+  }
+
+  .choice-course__heading {
+    font-size: 30px;
+  }
+
+  .choice-course__text {
+    line-height: 130%;
+  }
+
+  .choice-course__btn {
+    width: 212px;
+    padding: 24px 53px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  /* ---------- ---------- BENEFITS_BLOCK ---------- ---------- */
+
+  .benefits {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .benefits__img-block {
+    display: none;
+  }
+
+  .benefits__marker-text-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .benefits__marker {
+    margin-top: 30px;
+  }
+
+  /* ---------- ---------- TEACHERS_BLOCK ---------- ---------- */
+
+  .teachers {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .teachers__block {
+    margin-top: 30px;
+  }
+
+  /* ---------- ----------  COURSES_BLOCK ---------- ----------  */
+
+  .courses {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .courses__block-content {
+    height: 653px;
+  }
+  .courses__block {
+    margin-top: 30px;
+  }
+
+  .courses__block-detailed-btn {
+    padding: 20.5px 55.5px;
+    width: 195px;
+    height: 60px;
+  }
+
+  /* ---------- ---------- ЗАГОЛОВКИ (ОБЩЕЕ) ---------- ---------- */
+
+  .heading {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  /* ---------- ---------- * ---------- ---------- */
+}
+
+@media (min-width: 576px) {
+  /* ---------- ---------- HEADER ---------- ---------- */
+
+  .header {
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 133px;
+  }
+
+  .header__nav-list {
+    display: flex;
+  }
+
+  .hedaer__nav-item {
+    margin-left: 55px;
+  }
+
+  .header__nav-burger {
+    display: none;
+  }
+
+  /* ---------- ---------- CHOICES_BLOCK ---------- ---------- */
+
+  .choice-course {
+    height: 567px;
+  }
+
+  /* ---------- ---------- BENEFITS__BLOCK ---------- ---------- */
+
+  .benefits {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .benefits__img {
+    width: 150px;
+  }
+
+  .benefits__marker-text-block {
+    margin-top: 15px;
+  }
+
+  /* ---------- ---------- TEACHERS_BLOCK ---------- ---------- */
+
+  .teachers {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .teachers__block {
+    margin-top: 30px;
+  }
+
+  /* ---------- ----------  COURSES_BLOCK ---------- ----------  */
+
+  .courses {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .courses__block-content {
+    height: 653px;
+  }
+
+  .courses__block-detailed-btn {
+    padding: 20.5px 48px;
+    width: 180px;
+    height: 60px;
+  }
+
+  /* ---------- ---------- ЗАГОЛОВКИ (ОБЩЕЕ) ---------- ---------- */
+
+  .heading {
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  /* ---------- ---------- * ---------- ---------- */
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding: 0 40px;
+  }
+
+  /* ---------- ---------- HEADER ---------- ---------- */
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 80px;
+  }
+
+  /* ---------- ---------- CHOICES_BLOCK ---------- ---------- */
+
+  .choice-course {
+    height: 620px;
+
+    background: url('../img/Image_1_768.png') 90% 205px no-repeat,
+      radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  }
+
+  .choice-course__heading {
+    font-size: 50px;
+  }
+
+  /* ---------- ---------- BENEFITS_BLOCK ---------- ---------- */
+
+  .benefits {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .benefits__img {
+    width: 211px;
+  }
+
+  .benefits__marker-text-block {
+    margin-top: 15px;
+  }
+
+  /* ---------- ---------- TEACHERS_BLOCK ---------- ---------- */
+
+  .teachers {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* ---------- ----------  COURSES_BLOCK ---------- ----------  */
+
+  .courses {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .courses__block-content {
+    height: 556px;
+  }
+
+  .courses__block-detailed-btn {
+    padding: 20.5px 55.5px;
+    width: 195px;
+    height: 60px;
+  }
+  /* ---------- ---------- * ---------- ---------- */
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding: 0 150px;
+  }
+
+  /* ---------- ---------- CHOICES_BLOCK ---------- ---------- */
+
+  .choice-course {
+    background: url('../img/Image_1_1440.png') 642px 15px no-repeat,
+      radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  }
+
+  .choice-course__heading {
+    font-size: 60px;
+  }
+
+  /* ---------- ---------- BENEFITS_BLOCK ---------- ---------- */
+
+  .benefits {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .benefits__img {
+    width: 100%;
+  }
+
+  .benefits__marker-text-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .benefits__marker-text-block {
+    margin-top: 0px;
+  }
+
+  /* ---------- ---------- TEACHERS_BLOCK ---------- ---------- */
+
+  .teachers {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .teachers__block {
+    margin-top: 0;
+  }
+
+  /* ---------- ----------  COURSES_BLOCK ---------- ----------  */
+
+  .courses {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .courses__block-content {
+    height: 480px;
+  }
+
+  .courses__block-detailed-btn {
+    padding: 20.5px 59px;
+    width: 202px;
+    height: 60px;
+  }
+
+  /* ---------- ---------- * ---------- ---------- */
+}
+
+/* ---------- ---------- МОДИФИКАТОРЫ ---------- ---------- */
+
+.header__nav-list_active {
+  display: flex;
+}

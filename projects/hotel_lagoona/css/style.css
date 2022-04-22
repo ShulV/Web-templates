@@ -1,0 +1,1000 @@
+:root {
+  --background-color: #f1f1f1;
+
+  --light-orange: #cc9933;
+  --dark-orange: #a47312;
+  --white: #ffffff;
+  --grey-c: #cccccc;
+  --grey-9: #999999;
+  --grey-6: #666666;
+  --grey-3: #333333;
+}
+
+body {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  outline-width: 0;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* common styles */
+
+.heading {
+  margin-left: 40px;
+
+  color: var(--grey-3);
+
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.white-orange-btn {
+  box-sizing: border-box;
+  height: 42px;
+  padding: 13px 20px;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+  transition: transform 0.3s ease;
+
+  color: var(--light-orange);
+  border: 1px solid var(--light-orange);
+  border-radius: 10px;
+  background: var(--white);
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.white-orange-btn:hover {
+  transform: scale(1.05);
+
+  color: var(--white);
+  background: var(--light-orange);
+}
+
+.white-orange-btn:active {
+  background: var(--dark-orange);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 1920px;
+
+  background: var(--background-color);
+
+  font-family: "Muller", sans-serif;
+}
+
+/* 1 Шапка*/
+
+.header {
+  width: 1170px;
+  height: 154px;
+  margin-top: 30px;
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+
+  width: 1170px;
+  height: 54px;
+}
+
+.header__logo {
+  width: 261px;
+  height: 54px;
+
+  border-radius: 15px;
+}
+
+.header__phone {
+  margin-left: 30px;
+  padding: 5px;
+
+  transition: color 0.3s ease;
+
+  color: var(--grey-6);
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.header__phone:hover,
+.header__phone:focus {
+  color: var(--light-orange);
+}
+
+.header__phone:focus {
+  box-sizing: border-box;
+
+  outline: 1px solid var(--light-orange);
+}
+
+.header__phone:active {
+  color: var(--dark-orange);
+}
+
+.header__personal-office {
+  margin-right: 0;
+  margin-left: auto;
+  padding: 5px;
+
+  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
+
+  color: var(--light-orange);
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.header__personal-office:hover {
+  opacity: 0.7;
+}
+
+.header__personal-office:focus {
+  box-sizing: border-box;
+
+  opacity: 1;
+  outline: 1px solid var(--light-orange);
+}
+
+.header__personal-office:active {
+  opacity: 1;
+  color: var(--dark-orange);
+}
+
+.header__personal-office::before {
+  width: 21px;
+  height: 12px;
+  margin-right: 7px;
+
+  content: url("../img/arrow_right.svg");
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  width: 1170px;
+  height: 70px;
+  margin-top: 30px;
+
+  background: var(--white);
+}
+
+.header__header__links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* 1.2 Меню */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  list-style-type: none;
+}
+
+.header__nav__item {
+  margin-left: 45px;
+  padding: 27px 0;
+
+  cursor: pointer;
+
+  color: var(--grey-6);
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.header__nav__item:hover {
+  transition: color 0.3s ease;
+
+  color: var(--light-orange);
+}
+
+.header__vert-line {
+  margin-left: 56px;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  justify-content: center;
+}
+
+.header__want-tour {
+  order: 0;
+
+  width: 107px;
+  margin-left: 56px;
+}
+
+.header__need-call {
+  order: 1;
+
+  width: 177px;
+  margin-right: 45px;
+  margin-left: auto;
+}
+
+/* 2 Спец предложения*/
+
+.spec-offers {
+  width: 1169px;
+  margin-top: 70px;
+}
+
+.spec-offers__block-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.spec-offers__block {
+  border-radius: 15px;
+}
+
+.spec-offers__block::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content: "";
+
+  border-radius: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 64, 89, 0.84) -2.9%,
+    rgba(53, 65, 83, 0) 65.7%
+  );
+}
+
+.spec-offers__place {
+  position: relative;
+
+  width: 573px;
+  height: 258px;
+  margin-top: 20px;
+}
+
+.spec-offers__place:first-child {
+  background-image: url("../img/spec_offers_1.png");
+}
+
+.spec-offers__place:last-child {
+  margin-top: 23px;
+
+  background-image: url("../img/spec_offers_2.png");
+}
+
+.spec-offers__rooms {
+  position: relative;
+
+  width: 573px;
+  height: 540px;
+  margin-top: 20px;
+  margin-left: 23px;
+
+  background-image: url("../img/spec_offers_3.jpg");
+}
+
+.spec-offers__block-heading {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  width: 299px;
+  height: 80px;
+
+  color: var(--white);
+
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.spec-offers__block-heading__lux {
+  top: 210px;
+
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+.spec-offers__price-text {
+  position: absolute;
+  bottom: 103px;
+  left: 40px;
+
+  width: 299px;
+
+  opacity: 0.8;
+  color: var(--white);
+
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.spec-offers__price-text__lux {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.spec-offers__detailed {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+
+  color: #ffcc66;
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.spec-offers__detailed::after {
+  position: absolute;
+  right: -18px;
+
+  content: url("../img/angle_right.svg");
+}
+
+.spec-offers__detailed:hover {
+  color: white;
+}
+
+/* 3 О нас*/
+
+.about-us {
+  width: 1169px;
+  margin-top: 70px;
+}
+
+.about-us__container {
+  width: 888px;
+  margin-top: 10px;
+}
+
+.about-us__text {
+  font-size: 16px;
+  line-height: 200%;
+}
+
+/* 4 Услуги*/
+
+.services {
+  width: 1169px;
+  margin-top: 70px;
+
+  font-size: 0;
+}
+
+.services__block {
+  display: inline-block;
+
+  width: 573px;
+  height: 330px;
+  margin-top: 23px;
+
+  border: none;
+  border-radius: 15px;
+  background: var(--white);
+  background-repeat: no-repeat;
+}
+
+.services__block:nth-child(-n + 2) {
+  margin-top: 20px;
+}
+
+.services__block:nth-child(2n) {
+  margin-left: 23px;
+}
+
+.services__block-img {
+  width: 100%;
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.services__block-heading {
+  display: inline-block;
+
+  max-width: 100%;
+  margin-top: 35px;
+  margin-left: 45px;
+  padding-right: 20px;
+
+  color: var(--light-orange);
+  background-image: url("../img/angle_right2.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.services__block-heading:hover {
+  opacity: 0.7;
+}
+
+.services__block-heading:active {
+  opacity: 1;
+  color: var(--dark-orange);
+}
+
+.services__block-text {
+  padding: 0 45px;
+
+  color: var(--grey-3);
+
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* 5 Преимущества*/
+
+.advantages {
+  width: 1169px;
+  margin-top: 70px;
+
+  font-size: 0;
+}
+
+.advantages__container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.advantages__block {
+  display: inline-block;
+  width: 275px;
+
+  margin-bottom: 24px;
+  margin-left: 22px;
+
+  border-radius: 12px;
+  background-color: var(--white);
+}
+
+.advantages__block:nth-child(4n-3) {
+  margin-left: 0;
+}
+
+.advantages__block:nth-child(-n + 4) {
+  margin-top: 30px;
+}
+
+.advantages__block-img {
+  height: 59px;
+  margin-top: 45px;
+  margin-left: 45px;
+}
+
+.advantages__block-text {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  padding: 0 45px;
+
+  color: var(--grey-3);
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+/* 6 Размещение*/
+
+.placing {
+  width: 1169px;
+  margin-top: 70px;
+
+  font-size: 0;
+}
+
+.placing__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.placing__block {
+  position: relative;
+
+  width: 373px;
+  height: 441px;
+  margin-top: 22px;
+  margin-left: 25px;
+
+  border-radius: 12px;
+  background-color: var(--white);
+}
+
+.placing__block:nth-child(-n + 3) {
+  margin-top: 30px;
+}
+
+.placing__block:nth-child(3n-2) {
+  margin-left: 0;
+}
+
+.placing__block-img {
+  width: 100%;
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.placing__block-img_last {
+  border-radius: 12px;
+}
+
+.placing__block-stars {
+  position: absolute;
+  right: 45px;
+  bottom: 175px;
+}
+
+.placing__stars-img {
+  width: 14px;
+  margin-left: 1px;
+}
+
+.placing__text {
+  margin-top: 25px;
+  padding: 0 45px;
+
+  color: var(--grey-3);
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+.placing__text-from {
+  color: #969696;
+}
+
+.placing__text-price {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.placing__text-city-country {
+  color: #999999;
+}
+
+.placing__btn-numbers {
+  position: absolute;
+  bottom: 40px;
+  left: 45px;
+}
+
+.placing__block:last-child {
+  background-image: url("../img/41.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.placing__see-all {
+  margin-top: 373px;
+  margin-left: 54px;
+
+  width: 265px;
+
+  color: var(--white);
+  background-image: url("../img/arrow_right_white.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 200%;
+
+  display: block;
+}
+
+.placing__see-all:hover {
+  text-decoration: underline;
+}
+
+.placing__see-all::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+
+/* 6+ Форма*/
+
+.want-tour {
+  width: 1170px;
+  margin-top: 70px;
+
+  border-radius: 15px;
+  background: #e9e9e9;
+}
+
+.heading__want-tour {
+  margin-top: 38px;
+}
+
+.want-tour__form {
+  display: flex;
+  align-items: center;
+
+  width: 1080px;
+  height: 106px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  padding: 0 8px;
+
+  border-radius: 15px;
+  background: var(--white);
+}
+
+.want-tour__form-column {
+  position: relative;
+
+  height: 50px;
+  margin-left: 20px;
+}
+
+.want-tour__form-column {
+  padding-left: 20px;
+
+  border-left: 1px solid #e1e1e1;
+}
+
+.want-tour__form-column:first-child {
+  padding: 0;
+
+  border-left: 0px solid #e1e1e1;
+}
+
+.want-tour__form-column:last-child {
+  margin-left: 30px;
+  padding-left: 25px;
+}
+
+.want-tour__city {
+  width: 169px;
+}
+
+.want-tour__country {
+  width: 190px;
+}
+
+.want-tour__choice-city,
+.want-tour__choice-country {
+  border: none;
+  background-image: url("../img/angle_down_black.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.want-tour__choice-date {
+  display: block;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.want-tour__choice-city,
+.want-tour__choice-country,
+.want-tour__choice-date,
+.want-tour__choice-nights-number,
+.want-tour__choice-tourists-number {
+  width: 100%;
+  margin-top: 15px;
+
+  color: black;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.want-tour__choice-city:hover::after,
+.want-tour__choice-country:hover::after {
+  cursor: pointer;
+}
+
+.want-tour__choice-nights-number,
+.want-tour__choice-tourists-number {
+  border-bottom: 1px solid var(--grey-c);
+}
+
+.want-tour__choice-nights-number::-webkit-inner-spin-button,
+.want-tour__choice-tourists-number::-webkit-inner-spin-button,
+.want-tour__choice-tourists-number::-webkit-outer-spin-button,
+.want-tour__choice-nights-number::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.want-tour__form-date-block,
+.want-tour__form-nights-block,
+.want-tour__form-tourists-block {
+  width: 142px;
+}
+
+.want-tour__form-searching-block {
+  width: 160px;
+}
+
+.want-tour__form-column-label {
+  color: black;
+
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.want-tour__btn {
+  height: 100%;
+  margin: auto;
+  padding: 0 30px;
+}
+
+/* 7 Контакты */
+
+.contacts {
+  width: 1168px;
+  margin-top: 70px;
+}
+
+.contacts__block {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 618px;
+  margin-top: 25px;
+
+  border-radius: 15px;
+  background-color: white;
+}
+
+.contacts__info {
+  width: 375px;
+  height: 528px;
+  margin-top: 45px;
+  margin-left: 45px;
+}
+
+.contacts__photo {
+  width: 653px;
+  height: 528px;
+  margin-top: 45px;
+  margin-left: 50px;
+
+  border-radius: 10px;
+  background: url("../img/lagoona_hotels.jpg");
+}
+
+.contacts__info-block {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 72px;
+
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.contacts__info-block:not(:first-child) {
+  margin-top: 25px;
+}
+
+.contacts__info-block:nth-child(3) {
+  height: 122px;
+}
+
+.contacts__info-heading {
+  display: block;
+
+  width: 145px;
+  height: 100%;
+
+  color: black;
+
+  font-family: Muller;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.contacts__info-text {
+  display: flex;
+  flex-direction: column;
+
+  width: 229px;
+  height: 100%;
+
+  color: black;
+
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 150%;
+}
+
+.contacts__info-email,
+.contacts__info-phone {
+  color: var(--light-orange);
+}
+
+.contacts__email-label {
+  color: var(--grey-9);
+}
+
+.contacts__btn-build-route {
+  height: auto;
+  margin-top: 45px;
+  padding: 27px 29px;
+
+  font-weight: bold;
+}
+
+.contacts__info-phone:hover,
+.contacts__info-email:hover {
+  opacity: 0.7;
+}
+
+.contacts__info-phone:focus,
+.contacts__info-email:focus {
+  box-sizing: border-box;
+
+  opacity: 1;
+  outline: 1px solid var(--light-orange);
+}
+
+.contacts__info-phone:active,
+.contacts__info-email:active {
+  opacity: 1;
+  color: var(--dark-orange);
+  outline-width: 0px;
+}
+
+/* 8 Подвал*/
+
+.footer {
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+
+  width: 1168px;
+  margin-top: 70px;
+  padding: 44px 52px;
+
+  border-radius: 15px;
+  background-color: var(--grey-3);
+}
+
+.footer__sun {
+  position: absolute;
+  top: 113px;
+  right: 175px;
+}
+
+.footer__info {
+  width: 320px;
+
+  color: white;
+
+  font-size: 16px;
+  line-height: 190%;
+}
+
+.footer__info-text_link:hover {
+  text-decoration: underline;
+}
+
+.footer__info-text_orange {
+  color: var(--light-orange);
+}
+
+.footer__contacts {
+  width: 360px;
+  margin-left: 102px;
+}
+
+.footer__contacts-text {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--light-orange);
+
+  font-size: 16px;
+  line-height: 190%;
+}
+
+.footer__contacts-address {
+  color: white;
+}
+
+.footer__socials {
+  width: 25px;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.footer__social-img:not(first-child) {
+  margin-top: 20px;
+}
+
+.footer__social-img:hover,
+.footer__social-img:focus {
+  width: auto;
+
+  fill: var(--light-orange);
+}
+
+.footer__social-img:active {
+  fill: var(--dark-orange);
+}
+
+.footer__contacts-phone:hover,
+.footer____contacts-email:hover {
+  opacity: 0.7;
+}
+
+.footer__contacts-phone:focus,
+.footer__contacts-email:focus {
+  box-sizing: border-box;
+
+  opacity: 1;
+  outline: 1px solid var(--light-orange);
+}
+
+.footer__contacts-phone:active,
+.footer__contacts-email:active {
+  opacity: 1;
+  color: var(--dark-orange);
+  outline-width: 0px;
+}
