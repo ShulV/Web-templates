@@ -267,12 +267,10 @@
     .ht-container__search-form-wrapper.is-opened {
         display: flex;
         animation-name: search-open;
-        animation-duration: .3s;
     }
 
     .ht-container__search-form-wrapper.is-closed {
         animation-name: search-close;
-        animation-duration: 0s; 
     }
 
     .ht-container__logo {

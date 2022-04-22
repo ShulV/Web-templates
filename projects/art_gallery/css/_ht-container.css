@@ -152,7 +152,6 @@
   background-image: url("../images/Search.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  transition: all 0.3s ease;
 }
 
 .ht-container__search-form-btn {

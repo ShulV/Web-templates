@@ -62,8 +62,9 @@ function setSearch(params) {
 
   search.addEventListener("animationstart", function () {
     if (this.classList.contains(params.hiddenClass)) {
-      this.classList.remove(params.activeClass);
       this.classList.remove(params.hiddenClass);
+      this.classList.remove(params.activeClass);
+      
     }
   });
 
