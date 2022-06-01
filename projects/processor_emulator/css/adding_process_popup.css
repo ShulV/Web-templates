@@ -1,0 +1,110 @@
+.adding-process-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -2000px;
+    /* transform: translate(-50%, -50%); */
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(0, 106, 193);
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(0,0,0,0.5);
+    
+}
+
+.adding-process-popup.open {
+    animation: 0.5s 1 alternate open-popup;
+    display: block;
+    right: 0;
+}
+
+.adding-process-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.adding-process-form__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    outline-width: 0;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition:  box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.adding-process-form__close-btn:hover {
+    background-color: rgb(219, 64, 110);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), inset 0px 0px 5px rgba(0,0,0,0.5);
+    transition:  box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.adding-process-form__close-btn:hover::after,
+.adding-process-form__close-btn:hover::before {
+    background-color: white;
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.adding-process-form__close-btn::after,
+.adding-process-form__close-btn::before {
+    content: ' ';
+    position: absolute;
+    height: 3px;
+    width: 31px;
+    border-radius: 2px;
+    background-color: black;
+    top: calc(50% - 2px);
+    left: 0px;
+    opacity: 0.8;
+    transition:  box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.adding-process-form__close-btn::after {
+    transform: rotate(45deg);
+}
+
+.adding-process-form__close-btn::before {
+    transform: rotate(-45deg);
+}
+
+.adding-process-form__input {
+    padding: 2px;
+}
+
+.adding-process-form__add-btn {
+    display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 20px;
+	outline: none;
+	border: none;  
+	border-radius: 6px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 17px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #385898;
+	background-color: #e7f3ff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+    margin-top: 40px;
+}
+
+.adding-process-form__add-btn:hover {
+	background-color: #DBE7F2;
+}

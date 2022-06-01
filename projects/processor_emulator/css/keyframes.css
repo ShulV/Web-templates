@@ -1,0 +1,9 @@
+@keyframes open-popup {
+    from {
+      right: -2000px;
+    }
+  
+    to {
+      right: 0;
+    }
+}

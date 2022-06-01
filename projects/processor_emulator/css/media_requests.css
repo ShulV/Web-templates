@@ -1,0 +1,8 @@
+@media screen and (max-width: 1000px) {
+    .process-table-container,
+    .console-container,
+    .process-diagram-container,
+    .process-queues-container {
+        width: 100%;
+    }
+}

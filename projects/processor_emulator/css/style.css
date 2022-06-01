@@ -1,0 +1,12 @@
+@import url('variables.css');
+@import url('keyframes.css');
+
+@import url('main.css');
+
+@import url('process_table.css');
+@import url('console.css');
+@import url('process_queues.css');
+@import url('process_diagram.css');
+@import url('adding_process_popup.css');
+
+@import url('media_requests.css');

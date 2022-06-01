@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Курсовая работа</title>
+
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="root" class="main-container">
+        <!--  -->
+        <div id="process-table-container" class="process-table-container">
+            
+            <h2 class="block-header">Список процессов</h2>
+            <div class="process-table-wrapper">
+                <table class="process-table" id="process-table"></table>
+            </div>
+            <button class="process-table-container__open-popup-btn" id="adding-process-popup-open-btn" type="button">Добавить</button>
+        </div>
+        <div class="console-container">
+            <h2 class="block-header">Вывод сообщений</h2>
+            <div class="console-container__entries" id="console-container__entries"></div>
+        </div>
+        <div class="process-diagram-container" id="process-diagram-container">
+            <div class="process-diagram-container__control">
+                <h3 class="process-diagram-container__control-timer-header">Таймер</h3>
+                <div class="process-diagram-container__control-timer" id="process-diagram-timer-tick">0</div>
+                <button class="process-diagram-container__control-start-timer-btn" id="process-diagram-start-timer-btn" type="button"></button>
+            </div>
+            <div class="process-diagram-container__diagram" id="process-diagram"></div>
+                
+        </div>
+        <div id="process-queues-container" class="process-queues-container">
+            <h2 class="block-header">Список очередей с приоритетом</h2>
+            <div class="process-queues-table-wrapper">
+                <table class="process-queues-table" id="process-queues-table"></table>
+            </div>
+            
+        </div>
+        <!--  -->
+        <div class="adding-process-popup" id="adding-process-popup">
+            <form class="adding-process-form" id="adding-process-form" action="">
+                <h3 class="adding-process-form__header">Введите данные о процессе</h3>
+                <label class="adding-process-form__label" for="process-name">Название:</label>
+                <input class="adding-process-form__input" type="text" value="some process" name="process-name" id="process-name-input" >
+                <label class="adding-process-form__label" for="process-priority">Приоритет:</label>
+                <input class="adding-process-form__input" type="number" min="1" max="255" value="1" name="process-priority" id="process-priority-input">
+                <label class="adding-process-form__label" for="process-time">Время выполнения:</label>
+                <input class="adding-process-form__input" type="number" min="1" max="255" value="1" name="process-time" id="process-work-time-input">
+                <label class="adding-process-form__label" for="process-arrival-time">Время прибытия:</label>
+                <input class="adding-process-form__input" type="number" min="0" value="0" name="process-arrival-time" id="process-arrival-time-input">
+                
+                <button class="adding-process-form__add-btn" id="adding-process-btn" type="button">Добавить процесс</button>
+                <button class="adding-process-form__close-btn" id="adding-process-popup-close-btn" type="button"></button>
+            </form>
+        </div>
+        <!--  -->
+    </div>
+</body>
+</html>
