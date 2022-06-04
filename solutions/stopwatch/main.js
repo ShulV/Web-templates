@@ -73,18 +73,4 @@ class StopwatchController {
 
 // --------------------------------------------------------------------------------------------------------------
 
-function main() {
-    let app = new StopwatchController(new StopwatchView(), new StopwatchModel());
-    // console.log(app.model.getState())
-    // console.log(app.model.currentStopwatchTime)
-    // console.log(app.model.formatCurrentStopwatchTime)
-    // app.model.start();
-    // setTimeout(setTimeout(()=>{
-    //     app.model.stop();
-    //     console.log(app.model.getState())
-    //     console.log(app.model.currentStopwatchTime)
-    //     console.log(app.model.formatCurrentStopwatchTime)
-    // }, 150))
-}
-
-main();
+let app = new StopwatchController(new StopwatchView(), new StopwatchModel());
