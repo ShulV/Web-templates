@@ -131,7 +131,7 @@ class StopwatchModel {
     // получить текущее время секундомера в формате ч:м:с:мс
     get formatCurrentStopwatchTime() {
         let date = this._curStopwatchTimeMs;
-        return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`
+        return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${Math.round(date.getMilliseconds()/this._tickTimeMs)}`
     }
 
     // назначить обратный вызов для изменения текстового времени
