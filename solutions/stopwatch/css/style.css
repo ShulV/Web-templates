@@ -16,11 +16,38 @@ body {
 }
 
 .stopwatch__clock {
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: peru;
     border-radius: 50%;
     margin-bottom: 15px;
+    
+    background: url('../img/clock.png');
+    background-color: aliceblue;
+    background-size: contain;
+}
+
+.stopwatch__clock-second-arrow {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 50%;
+    background-color: black;
+    transform: rotate(0);
+    transition: 0.15s;
+    transform-origin: bottom;
+}
+
+.stopwatch__clock-msecond-arrow {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 50%;
+    background-color: red;
+    transform: rotate(0);
+    transition: 0.15s;
+    transform-origin: bottom;
 }
 
 .stopwatch__time-text {
@@ -45,7 +72,6 @@ body {
 .stopwatch__btn-stop {
     height: 50px;
     width: 50px;
-    outline: 1px solid black;
     border-radius: 50%;
     background-size: cover;
     transition: 0.5s;
