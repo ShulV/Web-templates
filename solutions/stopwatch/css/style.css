@@ -27,3 +27,35 @@ body {
     font-size: 40px;
     margin-bottom: 15px;
 }
+
+.stopwatch__btn-reset {
+    background: url("../img/reset.png");
+}
+
+.stopwatch__btn-start {
+    background: url('../img/play.png');
+}
+
+.stopwatch__btn-stop {
+    background: url('../img/pause.png');
+}
+
+.stopwatch__btn-reset,
+.stopwatch__btn-start,
+.stopwatch__btn-stop {
+    height: 50px;
+    width: 50px;
+    outline: 1px solid black;
+    border-radius: 50%;
+    background-size: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.stopwatch__btn-reset:hover,
+.stopwatch__btn-start:hover,
+.stopwatch__btn-stop:hover {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
