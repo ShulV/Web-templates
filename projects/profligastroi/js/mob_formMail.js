@@ -34,8 +34,6 @@ document.getElementById("mob_sendMail").addEventListener('click', () => {
 
   if (error) return;
 
-  console.log("СКРИПТ РАБОТАЕТ");
-
   $.ajax({
     url: 'ajax/mail.php',
     type: 'POST',
@@ -44,14 +42,11 @@ document.getElementById("mob_sendMail").addEventListener('click', () => {
     dataType: 'html',
     beforeSend: () => {
       $("#mob_sendMail").prop("disabled", true);
-      console.log("Нажата кнопка отправить");
     },
     success: (data) => {
       if (!data) {
-        console.log("Письмо не отправлено: " + String(data));
       }
       else {
-        console.log("Письмо отправлено: " + String(data));
         $("#mob_mailForm").trigger("reset");
       }
       $("#mob_sendMail").prop("disabled", false);

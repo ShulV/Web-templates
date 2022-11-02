@@ -756,12 +756,12 @@
 }
 
 .down-block__btn-left {
-  background: url('/img/black-triangle-pointer-left.png') 26px no-repeat var(--white);
+  background: url('../img/black-triangle-pointer-left.png') 26px no-repeat var(--white);
   margin-left: 35px;
 }
 
 .down-block__btn-right {
-  background: url('/img/black-triangle-pointer-right.png') 32px no-repeat var(--white);
+  background: url('../img/black-triangle-pointer-right.png') 32px no-repeat var(--white);
   margin-right: 35px;
 }
 

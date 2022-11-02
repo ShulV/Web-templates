@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let slider_tabs = document.querySelectorAll('.left-sect-2__tab');
   slider_tabs.forEach((btn, index, btns) => {
     btn.addEventListener('click', () => {
-      console.log('click')
       if (!slider_pause){
         tabSpliderFlip(tab_slider, index);
         slider_pause = true;

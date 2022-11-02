@@ -45,7 +45,6 @@ document.getElementById("sendMail").addEventListener('click', () => {
     },
     success: (data) => {
       if (!data) {
-        console.log("Письмо не отправлено")
       }
       else {
         $("#mailForm").trigger("reset");
